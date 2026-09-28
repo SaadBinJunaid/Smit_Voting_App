@@ -1,0 +1,168 @@
+/* ---------- Base ---------- */
+
+body {
+  margin: 0;
+  padding: 40px 20px 64px;
+  background-color: #f1f3f7;
+  color: #1f2430;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- Main card ---------- */
+
+.app {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e6e8ee;
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(24, 32, 51, 0.05), 0 10px 24px rgba(24, 32, 51, 0.06);
+}
+
+/* ---------- Question area ---------- */
+
+.question {
+  margin: 0;
+  padding: 26px 24px;
+  background-color: #eef1fb;
+  border-left: 4px solid #4f5bd5;
+  border-radius: 10px;
+  color: #171b2b;
+  font-size: 27px;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+/* ---------- Name input ---------- */
+
+.name-input {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px 16px;
+  background-color: #ffffff;
+  border: 1px solid #d6dae3;
+  border-radius: 9px;
+  color: #1f2430;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.name-input::placeholder {
+  color: #98a0b0;
+}
+
+.name-input:focus {
+  border-color: #4f5bd5;
+  box-shadow: 0 0 0 3px rgba(79, 91, 213, 0.16);
+}
+
+/* ---------- Vote buttons ---------- */
+
+.btn {
+  display: inline-block;
+  min-width: 120px;
+  margin-top: 20px;
+  padding: 12px 26px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn-yes {
+  margin-right: 10px;
+  background-color: #4f5bd5;
+  border-color: #4f5bd5;
+  color: #ffffff;
+}
+
+.btn-yes:hover {
+  background-color: #414cb8;
+  border-color: #414cb8;
+}
+
+.btn-no {
+  background-color: #ffffff;
+  border-color: #d6dae3;
+  color: #4a5468;
+}
+
+.btn-no:hover {
+  background-color: #f4f6fa;
+  border-color: #b9c0cd;
+  color: #1f2430;
+}
+
+/* ---------- Vote history ---------- */
+
+.history {
+  max-width: 680px;
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.vote-item {
+  padding: 16px 18px;
+  background-color: #ffffff;
+  border: 1px solid #e6e8ee;
+  border-radius: 11px;
+  box-shadow: 0 1px 2px rgba(24, 32, 51, 0.05);
+}
+
+.vote-item h2 {
+  margin: 0 0 8px;
+  color: #171b2b;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.vote-item p {
+  margin: 0;
+  color: #6b7488;
+  font-size: 14px;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 600px) {
+  body {
+    padding: 22px 14px 40px;
+  }
+
+  .app {
+    padding: 20px;
+  }
+
+  .question {
+    padding: 20px 18px;
+    font-size: 21px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+  }
+
+  .btn-yes {
+    margin-right: 0;
+  }
+
+  .btn-no {
+    margin-top: 10px;
+  }
+}
